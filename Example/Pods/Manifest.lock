@@ -1,0 +1,23 @@
+PODS:
+  - ArrowIndicatorScrollview (0.1.1):
+    - FontAwesome.swift
+  - FontAwesome.swift (1.4.8)
+
+DEPENDENCIES:
+  - ArrowIndicatorScrollview (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FontAwesome.swift
+
+EXTERNAL SOURCES:
+  ArrowIndicatorScrollview:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ArrowIndicatorScrollview: 2cf682d37750c15e452b599429eb8904798daaf6
+  FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
+
+PODFILE CHECKSUM: b94622c0e540fe0b7561701d081142266c8e1ad8
+
+COCOAPODS: 1.5.2

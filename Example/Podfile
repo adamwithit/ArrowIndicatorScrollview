@@ -1,11 +1,8 @@
 use_frameworks!
 
+
 target 'ArrowIndicatorScrollview_Example' do
   pod 'ArrowIndicatorScrollview', :path => '../'
-
-  target 'ArrowIndicatorScrollview_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  
 end
+

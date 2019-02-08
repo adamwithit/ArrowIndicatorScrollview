@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import ArrowIndicatorScrollview
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var colorSC: ArrowIndicatorScrollview!
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorSC.showArrows = true
+        colorSC.arrowLength = 45
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
