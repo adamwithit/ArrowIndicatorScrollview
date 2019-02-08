@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorSC.showArrows = true
         colorSC.arrowLength = 45
-        
+        colorSC.arrowColor = UIColor.white
         // Do any additional setup after loading the view, typically from a nib.
     }
 

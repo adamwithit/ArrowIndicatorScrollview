@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Don Chu/ArrowIndicatorScrollview'
+  s.homepage         = 'https://github.com/adamwithit/ArrowIndicatorScrollview'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Don Chu' => 'don.chu@xdynamics.com' }
-  s.source           = { :git => 'https://github.com/Don Chu/ArrowIndicatorScrollview.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/adamwithit/ArrowIndicatorScrollview.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

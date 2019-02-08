@@ -48,6 +48,16 @@ public class ArrowIndicatorScrollview: UIScrollView {
         }
     }
     
+    public var arrowColor: UIColor = UIColor.gray{
+        willSet(newValue){
+            removeComponents(.arrows)
+        }
+        
+        didSet{
+            addComponents(.arrows)
+        }
+    }
+    
     public var edgesToFade: UIRectEdge = .all {
         willSet(newValue) {
             removeComponents()
@@ -227,7 +237,7 @@ public class ArrowIndicatorScrollview: UIScrollView {
         let arrowsOn = components.contains(.arrows)
         let gradientsOn = components.contains(.gradients)
         
-        let arrowSize = CGSize.init(width: 30, height: 30)
+        let arrowSize = CGSize.init(width: arrowLength, height: arrowLength)
         
         // initialize views
         var vGradient = UIView()
@@ -257,8 +267,7 @@ public class ArrowIndicatorScrollview: UIScrollView {
         
         // get a view
         if (arrowsOn) {
-            btnArrow.setImage(UIImage.fontAwesomeIcon(name: .caretLeft, style: .solid, textColor: .black, size: arrowSize), for: .normal)
-//            btnArrow.titleLabel?.text = ">"
+            btnArrow.setImage(UIImage.fontAwesomeIcon(name: .caretLeft, style: .solid, textColor: arrowColor, size: arrowSize), for: .normal)
             switch side {
             case .left:
                 btnArrow.tag = fadeTagLeft + 1
@@ -287,6 +296,7 @@ public class ArrowIndicatorScrollview: UIScrollView {
                 btnArrow.imageView!.backgroundColor = UIColor.red
                 btnArrow.backgroundColor = UIColor.green
             }
+            
             
             superview?.addSubview(btnArrow)
         }
@@ -323,6 +333,10 @@ public class ArrowIndicatorScrollview: UIScrollView {
             default:
                 break
             }
+            gradient.colors = [UIColor.black, UIColor.clear]
+            gradient.locations = [0, 1]
+            
+            
 //            gradient.setEasedGradientColors([UIColor.black, UIColor.clear], locations: [0, 1], easingFunction: {(p:Double) -> Double in return sin((p - 1) * M_PI_2) + 1}, keyframesBetweenLocations: 6)
             vGradient.layer.mask = gradient
     
